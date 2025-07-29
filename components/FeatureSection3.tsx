@@ -7,15 +7,16 @@ const featureCards = [
       "No more switching. Manage all your assets across different networks seamlessly.",
     bgColor: "bg-red-200",
     imgSrc:
-      "https://sanity-proxy-v2.phantom.app/files/3nm6d03a/production/ef9e9258b2cb966a1748ef70d71706c171856e14.webm#t=0.1",
+      "https://cms-videos.decentraland.org/ea2ybdmmn1kv/380JXFfC5zgsRTN0MFGB7N/29a5560079b203045e783236a1b357db/CompressDanceVideo.webm",
   },
+  
   {
     title: " Self-custodial means you control your funds. We never have access. ",
     description:
       "Seamlessly browse, buy, and showcase your favorite digital collectibles.",
     bgColor: "bg-yellow-100",
     imgSrc:
-      "https://sanity-proxy-v2.phantom.app/files/3nm6d03a/production/814e142cae1b3da7bd7455709d3ab8674bbb734d.webm#t=0.1",
+      "https://cms-videos.decentraland.org/ea2ybdmmn1kv/2K9i1A8oUKTtpfqHsfvnTE/55a1b45a8e4a9ccbd08dafbaa6b4a66e/hero_mobile_8.mp4",
   },
   {
     title: "Connect your Ledger to keep your crypto even safer. ",
@@ -23,7 +24,7 @@ const featureCards = [
       "A beautiful interface to display your unique digital art and assets.",
     bgColor: "bg-blue-200",
     imgSrc:
-      "https://sanity-proxy-v2.phantom.app/files/3nm6d03a/production/0f1866916249a4bf118507a135c7ba233f48e91a.webm#t=0.1",
+      "https://cms-videos.decentraland.org/ea2ybdmmn1kv/2K9i1A8oUKTtpfqHsfvnTE/55a1b45a8e4a9ccbd08dafbaa6b4a66e/hero_mobile_8.mp4",
   },
 ];
 

@@ -15,7 +15,7 @@ const featureCards = [
       "Seamlessly browse, buy, and showcase your favorite digital collectibles.",
     bgColor: "bg-rose-200",
     imgSrc:
-      "https://framerusercontent.com/assets/PiAV5ldxJoY8M9O1OA5Iv9daxE.mp4",
+      "https://framerusercontent.com/assets/1vW6CFbBkCmCayrJjAPtguki2g0.mp4",
   },
   {
     title: "Store, stake, and earn rewards with your tokens.",
@@ -23,7 +23,7 @@ const featureCards = [
       "A beautiful interface to display your unique digital art and assets.",
     bgColor: "bg-amber-200/80",
     imgSrc:
-      "https://framerusercontent.com/assets/PiAV5ldxJoY8M9O1OA5Iv9daxE.mp4",
+      "https://framerusercontent.com/assets/OJmUgxKZDw2rJCngrvLLwRGd0U.mp4",
   },
 ];
 
