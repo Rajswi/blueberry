@@ -61,8 +61,8 @@ export const Navbar = () => {
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
         <Link href="/" className="z-50 flex items-center gap-2">
           
-          <img src="/blueberry-logo.png" alt="Blueberry Logo" width={56} height={56}  />
-          <span className="text-3xl font-bold text-purple-900">blueBerry</span>
+          <img src="/blueberry-logo.png" alt="Blueberry Logo" width={48} height={48}  />
+          <span className="text-2xl font-bold text-purple-900">BlueBerry</span>
         </Link>
         <div
           className={cn(

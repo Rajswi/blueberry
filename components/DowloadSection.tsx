@@ -41,7 +41,7 @@ return (
                 as="h1"
                 className="text-balance text-6xl font-bold md:text-7xl text-purple-900 mt-4"
               >
-               Download blueBerry to get started
+               Download BlueBerry to get started
               </TextEffect>
                <p className="text-xl font-medium text-black/40 mt-8">
                Trusted by more than 15 million people
@@ -53,7 +53,7 @@ return (
                   className="rounded-full h-14  px-8 text-lg font-semibold bg-white hover:bg-white/80 hover:scale-95 cursor-pointer text-purple-900 shadow-lg shadow-purple-500/40 duration-300"
                 >
                   <Smartphone className="mr-3 h-5 w-5" />
-                  Download blueBerry
+                  Download BlueBerry
                 </Button>
               </motion.div>
               </div>

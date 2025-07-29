@@ -54,7 +54,7 @@ export default function HeroSection() {
                   className="rounded-full h-14  px-8 text-lg font-semibold bg-purple-500 hover:bg-purple-800 text-white shadow-lg shadow-purple-500/40"
                 >
                   <ArrowDownToLine className="mr-3 h-5 w-5" />
-                  Download blueBerry
+                  Download BlueBerry
                 </Button>
               </motion.div>
 
