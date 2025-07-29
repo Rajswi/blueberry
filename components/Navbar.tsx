@@ -1,144 +1,195 @@
-'use client'
-import Link from 'next/link'
-import { Logo } from '@/components/logo'
-import { Menu, X } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import React from 'react'
-import { cn } from '@/lib/utils'
+"use client";
+import Link from "next/link";
+import { Logo } from "@/components/logo";
+import { Menu, X, ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import React from "react";
+import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
 
 const menuItems = [
- { name: 'Features', href: '#' },
+  { name: "Features", href: "#" },
   {
-    name: 'Learn',
-    href: '#',
+    name: "Learn",
+    href: "#",
     dropdown: [
-      { name: 'Blog', href: '#' },
-      { name: 'Guides', href: '#' },
-      { name: 'Help Center', href: '#' },
+      { name: "Blog", href: "#" },
+      { name: "Guides", href: "#" },
+      { name: "Help Center", href: "#" },
     ],
   },
   {
-    name: 'Explore',
-    href: '#',
+    name: "Explore",
+    href: "#",
     dropdown: [
-        { name: 'Dapps', href: '#' },
-        { name: 'NFTs', href: '#' },
-        { name: 'DeFi', href: '#' },
-    ]
+      { name: "Dapps", href: "#" },
+      { name: "NFTs", href: "#" },
+      { name: "DeFi", href: "#" },
+    ],
   },
   {
-    name: 'Company',
-    href: '#',
+    name: "Company",
+    href: "#",
     dropdown: [
-        { name: 'About Us', href: '#' },
-        { name: 'Careers', href: '#' },
-        { name: 'Press', href: '#' },
-    ]
+      { name: "About Us", href: "#" },
+      { name: "Careers", href: "#" },
+      { name: "Press", href: "#" },
+    ],
   },
-    { name: 'About', href: '#link' },
-]
+  { name: "About", href: "#link" },
+];
 
 export const Navbar = () => {
-    const [menuState, setMenuState] = React.useState(false)
-    const [isScrolled, setIsScrolled] = React.useState(false)
+  const [menuState, setMenuState] = React.useState(false);
+  const [isScrolled, setIsScrolled] = React.useState(false);
 
-    React.useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50)
-        }
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-    return (
-        <header className={cn("fixed top-0 left-0 w-full z-50 transition-all duration-300", menuState ? "bg-white/80 dark:bg-black/80 backdrop-blur-sm" : "")}>
-     
-            <nav
-    
-                className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
-
-                    <Link href="/" className="z-50">
-          {/* Make sure to place your 'blueberry-logo.png' in the '/public' directory */}
-          <img src="/blueberry-logo.png" alt="Blueberry Logo" width={50} height={14}  />
+  return (
+    <header
+      className={cn(
+        "fixed top-0 left-0 w-full z-50 transition-all duration-300",
+        menuState ? "bg-white/80 dark:bg-black/80 backdrop-blur-sm" : ""
+      )}
+    >
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
+        <Link href="/" className="z-50 flex items-center gap-2">
+          
+          <img src="/blueberry-logo.png" alt="Blueberry Logo" width={56} height={56}  />
+          <span className="text-3xl font-bold text-purple-900">blueBerry</span>
         </Link>
-                <div className={cn('mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12', isScrolled && 'bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5')}>
-                    <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
-                        <div className="flex w-full justify-between lg:w-auto">
-                            <Link
-                                href="/"
-                                aria-label="home"
-                                className="flex items-center space-x-2">
-                                <Logo />
-                            </Link>
+        <div
+          className={cn(
+            "hidden lg:flex items-center gap-2 p-2 rounded-full transition-all duration-300",
+            isScrolled
+              ? "bg-white/60 backdrop-blur-lg border border-gray-200/80"
+              : ""
+          )}
+        >
+          <ul className="flex items-center gap-2">
+            {menuItems.map((item) => (
+              <NavItem key={item.name} item={item} />
+            ))}
+          </ul>
+          <Button
+            asChild
+            size="sm"
+            variant="ghost"
+            className="rounded-full bg-white/50 hover:bg-white/80"
+          >
+            <Link href="#">Support</Link>
+          </Button>
+        </div>
+        
+        {/* Desktop Download Button */}
+        <div className="hidden lg:flex">
+          <Button
+            asChild
+            className="rounded-full bg-purple-500 hover:bg-purple-800 text-white font-semibold px-7 py-6"
+          >
+            <Link href="#">Download</Link>
+          </Button>
+        </div>
+        {/* Mobile Menu Toggle */}
+        <div className="lg:hidden z-50">
+          <button onClick={() => setMenuState(!menuState)}>
+            {menuState ? <X /> : <Menu />}
+          </button>
+        </div>
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {menuState && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className="absolute top-0 left-0 w-full h-screen bg-white/95 dark:bg-black/95 backdrop-blur-lg lg:hidden pt-24 px-8"
+            >
+              <ul className="flex flex-col gap-6 text-xl">
+                {menuItems.map((item) => (
+                  <li key={item.name} className="border-b border-gray-200 pb-4">
+                    <Link
+                      href={item.href}
+                      onClick={() => setMenuState(false)}
+                      className="font-semibold"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+                <li className="border-b border-gray-200 pb-4">
+                  <Link
+                    href="#"
+                    onClick={() => setMenuState(false)}
+                    className="font-semibold"
+                  >
+                    Support
+                  </Link>
+                </li>
+              </ul>
+              <Button
+                asChild
+                size="lg"
+                className="w-full mt-8 rounded-full bg-purple-500 hover:bg-purple-800 text-white font-semibold"
+              >
+                <Link href="#">Download</Link>
+              </Button>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
+    </header>
+  );
+};
 
-                            <button
-                                onClick={() => setMenuState(!menuState)}
-                                aria-label={menuState == true ? 'Close Menu' : 'Open Menu'}
-                                className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden">
-                                <Menu className="in-data-[state=active]:rotate-180 in-data-[state=active]:scale-0 in-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
-                                <X className="in-data-[state=active]:rotate-0 in-data-[state=active]:scale-100 in-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
-                            </button>
-                        </div>
+const NavItem = ({ item }: { item: (typeof menuItems)[0] }) => {
+  const [isHovered, setIsHovered] = React.useState(false);
 
-                        <div className="absolute inset-0 m-auto hidden size-fit lg:block">
-                            <ul className="flex gap-8 text-sm">
-                                {menuItems.map((item, index) => (
-                                    <li key={index}>
-                                        <Link
-                                            href={item.href}
-                                            className="text-muted-foreground hover:text-accent-foreground block duration-150">
-                                            <span>{item.name}</span>
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
-                            <div className="lg:hidden">
-                                <ul className="space-y-6 text-base">
-                                    {menuItems.map((item, index) => (
-                                        <li key={index}>
-                                            <Link
-                                                href={item.href}
-                                                className="text-muted-foreground hover:text-accent-foreground block duration-150">
-                                                <span>{item.name}</span>
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                            <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                                <Button
-                                    asChild
-                                    variant="outline"
-                                    size="sm"
-                                    className={cn(isScrolled && 'lg:hidden')}>
-                                    <Link href="#">
-                                        <span>Login</span>
-                                    </Link>
-                                </Button>
-                                <Button
-                                    asChild
-                                    size="sm"
-                                    className={cn(isScrolled && 'lg:hidden')}>
-                                    <Link href="#">
-                                        <span>Sign Up</span>
-                                    </Link>
-                                </Button>
-                                <Button
-                                    asChild
-                                    size="sm"
-                                    className={cn(isScrolled ? 'lg:inline-flex' : 'hidden')}>
-                                    <Link href="#">
-                                        <span>Get Started</span>
-                                    </Link>
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </header>
-    )
-}
+  return (
+    <li
+      className="relative"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <Link
+        href={item.href}
+        className="flex items-center gap-1 rounded-full py-2 px-4 text-sm font-medium text-gray-700 hover:bg-gray-200/60 transition-colors"
+      >
+        {item.name}
+        {item.dropdown && <ChevronDown size={16} className="text-gray-500" />}
+      </Link>
+      <AnimatePresence>
+        {isHovered && item.dropdown && (
+          <motion.div
+            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48"
+          >
+            <div className="bg-white rounded-lg shadow-lg border border-gray-200/80 overflow-hidden">
+              <ul>
+                {item.dropdown.map((subItem) => (
+                  <li key={subItem.name}>
+                    <Link
+                      href={subItem.href}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      {subItem.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </li>
+  );
+};

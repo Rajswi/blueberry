@@ -7,12 +7,12 @@ import FeaturesSection3 from "@/components/FeatureSection3";
 
 export default function Home() {
   return (
-   <> 
+   <div className="bg-[#f5f2ff]"> 
     <HeroSection/>
     <FeaturesSection />
     <FeaturesSection2 />
     <FeaturesSection3 />
-    </>
+    </div>
 
       )
 }
