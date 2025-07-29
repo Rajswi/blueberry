@@ -6,7 +6,7 @@ import { Mail, SendHorizonal, ArrowDownToLine, LayoutGrid, Wallet, Zap, Settings
 import { Button } from "@/components/ui/button";
 import { TextEffect } from "@/components/ui/text-effect";
 import { AnimatedGroup } from "@/components/ui/animated-group";
-import { Navbar } from "./Navbar";
+
 
 const transitionVariants: { item: Variants } = {
   item: {
@@ -35,7 +35,7 @@ export default function HeroSection() {
         <section>
           <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-32 lg:pt-48">
             <div className="relative z-10 mx-auto max-w-4xl text-center">
-              <p className="text-xl font-medium text-purple-500">
+              <p className="text-xl font-medium text-black/70">
                 The crypto wallet that'll take you places
               </p>
 

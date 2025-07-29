@@ -33,16 +33,16 @@ export default function FeaturesSection() {
       <div className="mx-auto max-w-5xl px-6">
         <div className="relative">
           <div className="relative z-10 text-center mb-12">
-            <h2 className="text-6xl md:text-8xl font-medium tracking-tight text-purple-900 mb-14 leading-[125%]">
+            <h2 className="text-6xl md:text-8xl font-medium tracking-tight text-purple-900 mb-14 leading-[125%] ">
               Keep everything <br />
-              <div className=" flex gap-3 justify-center">
+              <div className=" flex gap-2 justify-center">
                 {" "}
                 in{" "}
                 <img
                   src="/blueberry-logo.png"
                   height={36}
-                  width={100}
-                  className=" aspect-square rotate-30"
+                  width={110}
+                  className=" aspect-square rotate-27"
                 />
                 one place
               </div>
@@ -98,9 +98,9 @@ const FeatureCard = ({
       height={300}
       className="rounded-xl shadow-lg"
     />
-    <div>
-      <h3 className="text-xl font-bold text-purple-800">{title}</h3>
-      <p className="text-purple-400 text-xs mt-2">{description}</p>
+    <div >
+      <h3 className="text-xl font-bold text-black/80">{title}</h3>
+      <p className="text-purple-900/80 font-medium text-xs mt-2">{description}</p>
     </div>
     <div></div>
   </Card>

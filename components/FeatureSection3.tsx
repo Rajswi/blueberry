@@ -41,7 +41,7 @@ export default function FeaturesSection() {
                 <img
                   src="/blueberry-logo.png"
                   height={36}
-                  width={100}
+                  width={120}
                   className=" aspect-square rotate-28"
                 />
                 by us
@@ -100,7 +100,7 @@ const FeatureCard = ({
     />
     </div>
     <div >
-      <h3 className="text-xl font-bold text-purple-950 text-center">{title}</h3>
+      <h3 className="text-xl font-bold text-black text-center">{title}</h3>
     </div>
     <div></div>
   </Card>

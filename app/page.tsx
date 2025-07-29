@@ -4,6 +4,8 @@ import { div } from "motion/react-client";
 import Image from "next/image";
 import FeaturesSection2 from "@/components/FeatureSection2";
 import FeaturesSection3 from "@/components/FeatureSection3";
+import DownloadSection from "@/components/DowloadSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
     <FeaturesSection />
     <FeaturesSection2 />
     <FeaturesSection3 />
+    <DownloadSection/>
+    <Footer />
     </div>
 
       )

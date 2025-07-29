@@ -5,7 +5,7 @@ const featureCards = [
     title: "Do more with NFTs — pin, hide, burn, and list. .",
     description:
       "No more switching. Manage all your assets across different networks seamlessly.",
-    bgColor: "bg-indigo-100/50",
+    bgColor: "bg-violet-300/80",
     imgSrc:
       "https://sanity-proxy-v2.phantom.app/files/3nm6d03a/production/c0004d979a7981cb1e78388368da034570af528d.webm#t=0.1",
   },
@@ -13,7 +13,7 @@ const featureCards = [
     title: " Swap tokens super fast and at low fees.",
     description:
       "Seamlessly browse, buy, and showcase your favorite digital collectibles.",
-    bgColor: "bg-rose-100/50",
+    bgColor: "bg-rose-200",
     imgSrc:
       "https://sanity-proxy-v2.phantom.app/files/3nm6d03a/production/284feb2572b3aaca8545e290aa5634797afe1965.webm#t=0.1",
   },
@@ -21,7 +21,7 @@ const featureCards = [
     title: "Store, stake, and earn rewards with your tokens.",
     description:
       "A beautiful interface to display your unique digital art and assets.",
-    bgColor: "bg-amber-100/50",
+    bgColor: "bg-amber-200/80",
     imgSrc:
       "https://sanity-proxy-v2.phantom.app/files/3nm6d03a/production/6e7ae33899041a368becdff9b35708a5a2a29a9d.webm#t=0.1",
   },
@@ -41,7 +41,7 @@ export default function FeaturesSection() {
                   src="/blueberry-logo.png"
                   height={36}
                   width={90}
-                  className=" aspect-square rotate-30"
+                  className=" aspect-square rotate-25"
                 />
                 tools
                 </div>
@@ -101,8 +101,8 @@ const FeatureCard = ({
     />
     </div>
     <div >
-      <h3 className="text-xl font-bold text-purple-800">{title}</h3>
-      <p className="text-purple-500 text-xs mt-2">{description}</p>
+      <h3 className="text-xl font-bold text-black text-center">{title}</h3>
+      
     </div>
     <div></div>
   </Card>
