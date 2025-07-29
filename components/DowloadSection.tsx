@@ -50,7 +50,7 @@ return (
               <motion.div variants={transitionVariants.item} className="mt-26">
                 <Button
                   size="lg"
-                  className="rounded-full h-14  px-8 text-lg font-semibold bg-white hover:bg-white/80 hover:scale-95 cursor-pointer text-purple-900 shadow-lg shadow-purple-500/40 duration-300"
+                  className="rounded-full h-14  px-8 text-lg font-semibold bg-white hover:bg-white/80 hover:scale-95 cursor-pointer text-purple-900  duration-300"
                 >
                   <Smartphone className="mr-3 h-5 w-5" />
                   Download BlueBerry

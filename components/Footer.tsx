@@ -47,39 +47,37 @@ const footerSections = [
 export default function Footer() {
   return (
     <footer className="bg-violet-400/60 p-8 sm:p-12  mx-auto ">
-      <div className=" mx-auto max-w-7xl  bg-white rounded-3xl p-6">
+      <div className=" mx-auto max-w-7xl  bg-white rounded-3xl p-10">
         {/* Newsletter Section */}
 
         <div className="flex gap-2">
-          <div className="flex items-start gap-4 p-8 w-1/3">
+          <div className="flex items-start gap-4 p-2 w-1/3">
             {/* Make sure your blueberry-logo.png is in the /public folder */}
+            <div className="flex gap-0 items-center">
             <img
               src="/blueberry-logo.png"
               alt="Blueberry Logo"
-              width={60}
+              width={50}
               height={60}
             />
-            <h3 className="text-lg font-medium item-center text-purple-900">BlueBerry</h3>
+            <h3 className="text-xl font-bold item-center text-purple-900">BlueBerry</h3></div>
           </div>
 
           <div className="flex flex-col gap-4 w-2/3">
             <div className="lg:col-span-2">
-              <h3 className="text-3xl font-bold text-purple-900">
+              {/* <h3 className="text-5xl font-semibold text-purple-900">
                 Enter your email
-              </h3>
-              <p className="text-purple-700 mt-2">
-                Sign up for our newsletter and join the growing Blueberry
-                community.
-              </p>
-              <form className="flex gap-3 mt-4">
+              </h3> */}
+              
+              <form className="flex gap-3 mt-4 relative">
                 <Input
                   type="email"
                   placeholder="Your email address"
-                  className="flex-grow"
+                  className="flex-grow h-24 rounded-xl text-2xl relative placeholder:text-3xl placeholder:pl-4 placeholder:pt-16 bg-muted border-none"
                 />
                 <Button
                   type="submit"
-                  className="bg-purple-500 hover:bg-purple-800 text-white rounded-2xl px-6 py-5"
+                  className="bg-purple-500 absolute bottom-8 right-4 hover:bg-purple-800 text-white rounded-2xl px-6 py-5"
                 >
                   Sign up
                 </Button>
