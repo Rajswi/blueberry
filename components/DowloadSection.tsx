@@ -29,7 +29,7 @@ const transitionVariants: { item: Variants } = {
 export default function DownloadSection() {
 return (
     <>
-     <main className="relative w-full min-h-screen overflow-hidden bg-purple-400/60 flex flex-col justify-center items-center text-center px-4 rounded-t-4xl">
+     <main className="relative w-full min-h-screen overflow-hidden bg-violet-300 flex flex-col justify-center items-center text-center px-4 rounded-t-4xl">
         <section>
           <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-32 lg:pt-48">
             <div className="relative z-10 mx-auto max-w-4xl text-center">

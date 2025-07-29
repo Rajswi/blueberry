@@ -7,7 +7,7 @@ const featureCards = [
       "No more switching. Manage all your assets across different networks seamlessly.",
     bgColor: "bg-violet-300/80",
     imgSrc:
-      "https://sanity-proxy-v2.phantom.app/files/3nm6d03a/production/c0004d979a7981cb1e78388368da034570af528d.webm#t=0.1",
+      "https://framerusercontent.com/assets/PiAV5ldxJoY8M9O1OA5Iv9daxE.mp4",
   },
   {
     title: " Swap tokens super fast and at low fees.",
@@ -15,7 +15,7 @@ const featureCards = [
       "Seamlessly browse, buy, and showcase your favorite digital collectibles.",
     bgColor: "bg-rose-200",
     imgSrc:
-      "https://sanity-proxy-v2.phantom.app/files/3nm6d03a/production/284feb2572b3aaca8545e290aa5634797afe1965.webm#t=0.1",
+      "https://framerusercontent.com/assets/PiAV5ldxJoY8M9O1OA5Iv9daxE.mp4",
   },
   {
     title: "Store, stake, and earn rewards with your tokens.",
@@ -23,7 +23,7 @@ const featureCards = [
       "A beautiful interface to display your unique digital art and assets.",
     bgColor: "bg-amber-200/80",
     imgSrc:
-      "https://sanity-proxy-v2.phantom.app/files/3nm6d03a/production/6e7ae33899041a368becdff9b35708a5a2a29a9d.webm#t=0.1",
+      "https://framerusercontent.com/assets/PiAV5ldxJoY8M9O1OA5Iv9daxE.mp4",
   },
 ];
 
